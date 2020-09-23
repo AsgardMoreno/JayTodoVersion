@@ -1,0 +1,12 @@
+
+  @font-face {
+    font-family: AvenirBold;
+    src: url(../font/Avenir-Heavy-05.ttf);
+  }
+  .headerText{
+  margin-top: -10px;
+  font-family: AvenirBold;
+  font-size: 2.2em;
+  color: antiquewhite;
+  font-weight: bolder;
+}

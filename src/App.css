@@ -1,8 +1,16 @@
-.App{
+@font-face {
+  font-family: Avenir;
+  src: url(./font/Avenir-Light-07.ttf);
+}
+* {
+  box-sizing: border-box;
+  text-align: center;
+  font-family: Avenir;
   margin: auto;
-  width: 414px;
-  height: 736px;
+}
+main {
+  width: 400px;
+  height: 650px;
+  margin: auto;
   background-image: url("./theme/images/pattern.png");
 }
-
-

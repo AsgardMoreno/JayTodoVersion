@@ -4,6 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `nvm use`
+
+To check/use the correct version of node for the proyect
+
 ### `npm start`
 
 Runs the app in the development mode.<br />

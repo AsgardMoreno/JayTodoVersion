@@ -1,13 +1,9 @@
-import React from 'react';
-import './App.css';
-import StartPage from './StartPage';
+import React from "react";
+import AppRouter from "./Router/index.js";
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">  
-      <StartPage />
-    </div>
-  );
+  return <AppRouter />;
 }
 
 export default App;

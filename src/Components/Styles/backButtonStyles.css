@@ -1,0 +1,11 @@
+.backButton{
+  background-color: transparent;
+  border: none;
+  margin-top: 20px;
+  margin-right: 335px;
+  cursor: pointer;
+  outline: none;
+}
+.backButton:hover{
+  margin-right: 338px;
+}
