@@ -7,9 +7,10 @@ const BackButton = () => {
   return (
     <Link
       to='/categories'
-      className="linkStyle">
+      className="linkStyle"
+    >
       <button className="backButton">
-        <img src={backButton} />
+        <img src={backButton} alt='BackButton' />
       </button>
     </Link>
 

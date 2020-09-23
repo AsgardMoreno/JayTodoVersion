@@ -1,3 +1,7 @@
+.buttonDiv{
+  width: auto;
+  height: 32.5%;
+}
 .startButton {
   border-color: whitesmoke;
   border-style: solid;
@@ -19,9 +23,13 @@
 }
 
 .startHeaderLogo{
-  padding:12.5%
+  padding:12.5%;
+  height: 33%; 
 }
 
+.imageDiv{
+  height: 32%;
+}
 .avatarsImage {
-  margin-top: 16px;
+  margin-top: 5.7%;
 }

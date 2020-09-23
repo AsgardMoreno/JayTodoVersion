@@ -11,12 +11,18 @@ const StartPage = () => {
       <header className={headerClassName}>
         <HeaderLogo />
       </header>
-      <Link to="/categories">
-        <button className="startButton" type="button">
-          COMENZAR
+      <div className='buttonDiv'>
+        <Link to="/categories">
+          <button className="startButton" type="button">
+            COMENZAR
         </button>
-      </Link>
-      <img className="avatarsImage" src={avatars} alt="avatars" />
+        </Link>
+      </div>
+      <div className='imageDiv'>
+        <picture>
+          <img className="avatarsImage" src={avatars} alt="avatars" />
+        </picture>
+      </div>
     </main>
   );
 };

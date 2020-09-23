@@ -2,6 +2,7 @@
   padding: 6%;
 }
 .rowCategoryImagesDiv{
+  margin-top: 3vh;
   display: flex;
   padding: 10px;
   justify-content: center;
