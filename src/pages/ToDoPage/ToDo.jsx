@@ -1,13 +1,26 @@
 import React from "react";
-import CategoryHeader from "../../Components/CategoryHeader.jsx";
-import './toDo.css'
+import CategoryHeader from "../../Components/CategoryHeader";
+import './toDo.css';
+import ToDoTaskList from "../../Components/ToDoTaskList";
+import { ToDoListProvider } from "../../Services/CategoriesTaskContext.jsx";
+import AddTaskButton from "../../Components/AddTaskButton";
+import ShowNewTaskModal from '../../Components/NewTaskModal';
 
 const ToDo = () => {
 
   return (
-    <div className='mainToDo'>
-      <CategoryHeader />
-    </div>
+    <ToDoListProvider>
+      <div className='mainToDo'>
+        <CategoryHeader />
+        <ToDoTaskList />
+        <AddTaskButton />
+
+      </div>
+      <div>
+        <ShowNewTaskModal />
+      </div>
+    </ToDoListProvider>
+
   )
 }
 

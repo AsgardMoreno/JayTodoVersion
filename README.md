@@ -6,7 +6,7 @@ In the project directory, you can run:
 
 ### `nvm use`
 
-To check/use the correct version of node for the proyect
+To check/use this proyect node version
 
 ### `npm start`
 

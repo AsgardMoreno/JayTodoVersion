@@ -1,0 +1,14 @@
+.addButtonStyle{
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 20px;
+  border-radius: 60px;
+  border-style: none;
+  outline: none;
+  position: fixed;
+  background-color: #f93366;
+  float: right;
+  padding: 16px;
+  cursor: pointer;
+}

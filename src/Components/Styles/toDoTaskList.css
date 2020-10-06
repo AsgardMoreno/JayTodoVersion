@@ -1,0 +1,4 @@
+.toDoListItems{
+  overflow: scroll;
+  max-height: 70%;
+}

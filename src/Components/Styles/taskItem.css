@@ -1,0 +1,39 @@
+@font-face {
+  font-family: AvenirLight;
+  src: url(../../font/Avenir-Book-01.ttf)
+}
+.taskDiv{
+  background-color: white;
+  width: 94%;
+  padding: 1%;
+  border-radius: 10px;
+  margin-top: 2%;
+}
+
+.taskInLineContent{
+  display: inline-flex;
+  vertical-align: middle;
+}
+.taskContent{
+  overflow: scroll;
+  font-family: AvenirLight;
+  font-weight: 500;
+  margin-left: 2%;
+  text-align: left;
+}
+
+.taskDate{
+  font-size: .92em;
+  width: 30px;
+  color: red;
+  margin-right: 10px;
+}
+.taskDivision{
+  color: red;
+  width: 3%;
+  font-size: 2.2em;
+  margin-right: 10px;
+}
+.taskText{
+text-align: justify;
+}
