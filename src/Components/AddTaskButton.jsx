@@ -5,7 +5,7 @@ import './Styles/addTaskButton.css';
 const AddTaskButton = () => {
   const addButtonImage = require('../theme/images/icon-plus.png')
   return (
-    <div >
+    <div className='addButtonDiv'>
       <button type='button' className='addButtonStyle' onClick={addNewTaskModal}>
         <img src={addButtonImage} alt='addTaskButton' />
       </button>

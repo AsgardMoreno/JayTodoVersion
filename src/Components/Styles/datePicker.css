@@ -1,0 +1,113 @@
+input[type='number text']::-webkit-outer-spin-button,
+input[type='number text']::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number']{
+  -moz-appearance: textfield;
+}
+
+
+@font-face {
+  font-family: AvenirBold;
+  src: url(../../font/Avenir-Light-07.ttf);
+}
+
+.datePicker{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 6px rgb(0, 0, 0, .5);
+
+  color: darkslategrey;
+  font-size: 24px;
+  font-weight: 700;
+  user-select: none;
+
+  margin-bottom: 5%;
+}
+
+.datePicker .day,
+.datePicker .month,
+.datePicker .year{
+  position: relative;
+  min-width: 60px;
+  text-align: center;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+}
+
+.datePicker .day .dayInput,
+.datePicker .month .monthInput,
+.datePicker .year .yearInput{
+  background: none;
+  font-size: 20px;
+  appearance: none;
+  border: none;
+  outline: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: AvenirBold;
+}
+
+.datePicker .day .dayUp,
+.datePicker .month .monthUp,
+.datePicker .year .yearUp,
+.datePicker .day .dayDown,
+.datePicker .month .monthDown,
+.datePicker .year .yearDown{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 30px;
+  height: 15px;
+
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+
+  cursor: pointer;
+}
+.datePicker .day .dayUp:hover,
+.datePicker .month .monthUp:hover,
+.datePicker .year .yearUp:hover,
+.datePicker .day .dayDown:hover,
+.datePicker .month .monthDown:hover,
+.datePicker .year .yearDown:hover{
+  border-bottom-color: black;
+  border-top-color: black;
+}
+.datePicker .day .dayUp:active,
+.datePicker .month .monthUp:active,
+.datePicker .year .yearUp:active,
+.datePicker .day .dayDown:active,
+.datePicker .month .monthDown:active,
+.datePicker .year .yearDown:active{
+  border-bottom-color:darkslategrey;
+  border-top-color: darkslategrey;
+}
+
+.datePicker .day .dayUp,
+.datePicker .month .monthUp,
+.datePicker .year .yearUp{
+  top: -12px;
+  border-bottom: 15px solid rgb(59, 59, 59);
+}
+
+.datePicker .day .dayDown,
+.datePicker .month .monthDown,
+.datePicker .year .yearDown{
+  bottom: -12px;
+  border-top: 15px solid rgb(59, 59, 59);
+}
+

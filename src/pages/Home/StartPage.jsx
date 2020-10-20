@@ -3,6 +3,7 @@ import "./startPage.css";
 import { Link } from "react-router-dom";
 import HeaderLogo from "../../Components/HeaderLogo.jsx";
 
+
 const StartPage = () => {
   const headerClassName = "startHeaderLogo";
   const avatars = require("../../theme/images/avatars.png");

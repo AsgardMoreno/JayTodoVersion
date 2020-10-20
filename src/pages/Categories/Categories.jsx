@@ -10,6 +10,7 @@ const Categories = () => {
   const categoryImagesSchool = require('../../theme/images/category-school.png');
   const categoryImagesWork = require('../../theme/images/category-work.png');
 
+
   return (
     <main>
       <header className="catHeaderLogo">

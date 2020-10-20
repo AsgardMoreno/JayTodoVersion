@@ -1,19 +1,40 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Styles/NewTaskModal.css';
 import './Styles/categoryHeaderStyle.css';
+import DatePicker from './DatePicker';
+import { CategoryTitle } from '../Services/setToDoHeader';
 
 export const addNewTaskModal = () => {
+  document.querySelector('.modalInput').value = '';
   document.querySelector('.mainToDo').classList.toggle('addBlur');
-  console.log('click');
   document.querySelector('.modalWindow').classList.toggle('activeModalWindow');
 };
 
-const ShowNewTaskModal = () => {
+const ShowNewTaskModal = ({ task, setTask }) => {
+  useEffect(() => {
+    saveToLocalTasks();
+    console.log('saving...');
+  }, [task]);
+  const saveToLocalTasks = () => {
+    localStorage.setItem("ToDos", JSON.stringify(task));
+  }
+
   const closeModal = () => {
-    console.log('closingModal')
     document.querySelector('.mainToDo').classList.toggle('addBlur');
     document.querySelector('.modalWindow').classList.toggle('activeModalWindow');
+  };
 
+  const addNewTask = (e) => {
+    e.preventDefault();
+    setTask(prevTask => [...prevTask, {
+      key: new Date().getTime(),
+      category: CategoryTitle,
+      name: document.getElementById('taskToDo').value,
+      completed: false,
+      date: `${document.getElementById('day').value} ${document.getElementById('month').value}`,
+      year: `${document.getElementById('year').value}`
+    }]);
+    closeModal();
   }
 
   return (
@@ -22,20 +43,29 @@ const ShowNewTaskModal = () => {
         <h1 className='modalHeaderText'>AGREGAR TAREA</h1>
       </header>
       <div className='modalAddTaskSection'>
-        <label for='task'> </label>
-        <input type='text' name='task' className='modalInput' placeholder='TAREA'>
-        </input>
-        <label for='date'> </label>
-        <input type='text' name='date' className='modalInput' placeholder='FECHA'>
-        </input>
-        <button className='modalButtonAgregar'>
-          AGREGAR
-        </button>
+        <form onSubmit={addNewTask}>
+          <input
+            autoFocus={true}
+            type='text'
+            name='task'
+            id='taskToDo'
+            className='modalInput'
+            placeholder='PENDIENTE....'
+            minLength='1'
+            maxLength='128'
+            required
+          />
+          <DatePicker />
+          <button type='submit' className='modalButtonAgregar'>
+            AGREGAR
+          </button>
+        </form>
         <button
           className='modalButtonCancelar'
           onClick={closeModal}>
           CANCELAR
         </button >
+
       </div>
 
 
@@ -45,5 +75,3 @@ const ShowNewTaskModal = () => {
 };
 
 export default ShowNewTaskModal;
-
-

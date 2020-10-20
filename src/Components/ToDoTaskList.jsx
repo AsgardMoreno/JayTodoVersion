@@ -1,17 +1,21 @@
 import React from 'react';
-import { categoryTasks } from '../Services/CategoriesTaskContext';
 import TaskItem from './TaskItem';
 import './Styles/toDoTaskList.css';
+import { CategoryTitle } from '../Services/setToDoHeader';
 
-const ToDoTaskList = () => {
+const ToDoTaskList = ({ task }) => {
+
   return (
     <div className="toDoListItems">
-      {categoryTasks
-        .map(task =>
+      {task.filter(individualTask => individualTask.category === CategoryTitle)
+        // .sort((b, a) => b.year - a.year)
+        .map(individualTask =>
           <TaskItem
-            date={task.date}
-            name={task.name}
-            completed={task.completed}
+            year={individualTask.year}
+            date={individualTask.date}
+            name={individualTask.name}
+            completed={individualTask.completed}
+            key={individualTask.key}
           />
         )}
     </div>

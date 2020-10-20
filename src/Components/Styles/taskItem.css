@@ -22,8 +22,15 @@
   text-align: left;
 }
 
+.taskYear{
+  font-size: 0.9em;
+  font-weight: bolder;
+  color:gray;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+}
 .taskDate{
-  font-size: .92em;
+  font-size: 1.1em;
   width: 30px;
   color: red;
   margin-right: 10px;
@@ -35,5 +42,6 @@
   margin-right: 10px;
 }
 .taskText{
+font-size: 1.1em;
 text-align: justify;
 }

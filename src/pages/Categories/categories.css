@@ -1,6 +1,9 @@
 .catHeaderLogo {
   padding: 6%;
 }
+.catHeaderLogo img {
+  margin-top: 2vh;
+}
 .rowCategoryImagesDiv{
   margin-top: 3vh;
   display: flex;

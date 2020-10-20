@@ -3,11 +3,11 @@ import { HeaderTitle } from '../Services/setToDoHeader.jsx';
 import BackButton from './BackButton';
 import './Styles/categoryHeaderStyle.css';
 
-const CategoryHeader = () => {
+const CategoryHeader = ({ task }) => {
   return (
     <header className='categoryHeaderStyle'>
       <BackButton />
-      <HeaderTitle />
+      <HeaderTitle task={task} />
     </header>
   );
 }
