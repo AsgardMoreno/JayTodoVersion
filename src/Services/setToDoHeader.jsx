@@ -24,8 +24,4 @@ export const HeaderTitle = ({ task }) => {
       <h4>{ActualDate}</h4>
     </div>
   )
-}
-
-
-
-
+};

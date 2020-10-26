@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Styles/NewTaskModal.css';
 import './Styles/categoryHeaderStyle.css';
 import DatePicker from './DatePicker';
@@ -10,14 +10,8 @@ export const addNewTaskModal = () => {
   document.querySelector('.modalWindow').classList.toggle('activeModalWindow');
 };
 
-const ShowNewTaskModal = ({ task, setTask }) => {
-  useEffect(() => {
-    saveToLocalTasks();
-    console.log('saving...');
-  }, [task]);
-  const saveToLocalTasks = () => {
-    localStorage.setItem("ToDos", JSON.stringify(task));
-  }
+const ShowNewTaskModal = ({ setTask }) => {
+
 
   const closeModal = () => {
     document.querySelector('.mainToDo').classList.toggle('addBlur');
@@ -45,7 +39,7 @@ const ShowNewTaskModal = ({ task, setTask }) => {
       <div className='modalAddTaskSection'>
         <form onSubmit={addNewTask}>
           <input
-            autoFocus={true}
+            autoFocus
             type='text'
             name='task'
             id='taskToDo'

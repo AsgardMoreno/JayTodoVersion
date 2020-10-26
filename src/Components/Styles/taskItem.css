@@ -24,6 +24,7 @@
 
 .taskYear{
   font-size: 0.9em;
+  margin-left: -4px;
   font-weight: bolder;
   color:gray;
   transform: rotate(180deg);
@@ -44,4 +45,8 @@
 .taskText{
 font-size: 1.1em;
 text-align: justify;
+}
+.completedTask{
+  /* <offset-x> <offset-y><blur-radius><color> */
+  filter: drop-shadow(3px 3px 4px gray) invert(56%);
 }

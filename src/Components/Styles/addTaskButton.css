@@ -2,21 +2,16 @@
   position: fixed;
   width: 100%;
   text-align: right;
-  padding: 5%;
   top: 85%;
   bottom: 19%;
-
-  
 }
 .addButtonStyle{
   height: 60px;
-
+  margin-right: 4%;
   border-radius: 60px;
   border-style: none;
   outline: none;
-
   background-color: #f93366;
-
   padding: 15px;
   cursor: pointer;
 }
