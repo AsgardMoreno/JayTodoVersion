@@ -120,7 +120,7 @@ const ToDo = () => {
 
   useEffect(() => {
     saveToLocalTasks();
-    console.log('saving...');
+    //console.log('saving...');
   }, [task]);
 
   const getLocalTasks = () => {
