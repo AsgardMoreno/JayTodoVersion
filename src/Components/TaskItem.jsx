@@ -7,7 +7,7 @@ const TaskItem = ({ task, setTask, date, name, year, thisTask, completed }) => {
   useEffect(() => {
     const itemsList = document.querySelectorAll('.taskDiv');
     itemsList.forEach(element => {
-      console.log(element.dataset.completed)
+      //console.log(element.dataset.completed)
       if (element.dataset.completed === 'true') {
         return element.classList.add('completedTask')
       }
@@ -24,9 +24,8 @@ const TaskItem = ({ task, setTask, date, name, year, thisTask, completed }) => {
       }
       return item;
     }))
-
-    console.log(task)
   }
+  
   return (
     <div className='taskDiv' onClick={completeTaskHandler} data-completed={completed}>
       <h3 className='taskContent'>
